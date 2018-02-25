@@ -20,5 +20,5 @@ def cadastro_clientes():
 
 def buscar_db_cli(bus_cpf):
     sql = 'SELECT * FROM db_clientes WHERE cpf = ?'
-    for row in c.execute(sql, (bus_cpf)):
+    for row in c.execute(sql, [bus_cpf]):
         print(row)
